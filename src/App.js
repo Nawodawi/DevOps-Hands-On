@@ -1,4 +1,4 @@
-import { Button, Form, Input, Layout, Col, Row } from 'antd';
+import { Button, Form, Input, Layout, Col, Row, Card } from 'antd';
 import React from 'react';
 import './App.css';
 const { Header, Footer, Content } = Layout;
@@ -27,36 +27,62 @@ const App = () => {
 
     <Layout>
 
-      <Header>DevOps Hands On</Header>
+      <Header></Header>
       <Content>
-      
-      <Row>
-      <Col span={8}></Col>
-      <Col span={8} className="space-align-blockd">
-      
-        <Form name="form_item_path" layout="vertical" onFinish={onFinish}>
-          <MyFormItemGroup prefix={['user']}>
-            <MyFormItemGroup prefix={['name']}>
-              <MyFormItem name="firstName" label="First Name">
-                <Input />
-              </MyFormItem>
-              <MyFormItem name="lastName" label="Last Name">
-                <Input />
-              </MyFormItem>
-            </MyFormItemGroup>
 
-            <MyFormItem name="age" label="Age">
-              <Input />
-            </MyFormItem>
-          </MyFormItemGroup>
+        <Row>
+          <Col span={8}></Col>
+          <Col span={8} className="space-align-blockd">
+            <Card bordered title="DevOps Hands On" style={{ width: 400 }}>
 
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form>
-        </Col>
-        <Col span={8}></Col>
-    </Row>
+              <Form name="form_item_path" layout="vertical" onFinish={onFinish}>
+                <MyFormItemGroup prefix={['user']}>
+                  <MyFormItemGroup prefix={['name']}>
+                    <MyFormItem name="firstName" label="First Name:">
+                      <Input />
+                    </MyFormItem>
+                    <MyFormItem name="phone" label="Phone no:">
+                      <Input />
+                    </MyFormItem>
+                  </MyFormItemGroup>
+
+                  <MyFormItem name="age" label="Age:">
+                    <Input />
+                  </MyFormItem>
+                </MyFormItemGroup>
+
+                <Row gutter={{
+                  xs: 8,
+                  sm: 16,
+                  md: 24,
+                  lg: 32,
+                }} >
+                  <Col className="gutter-row" span={5}>
+                    <Button type="primary" htmlType="submit">
+                      Save
+                    </Button>
+                  </Col>
+                  <Col className="gutter-row" span={5}>
+                    <Button type="primary" htmlType="submit">
+                      Edit
+                    </Button>
+                  </Col>
+                  <Col className="gutter-row" span={5}>
+                    <Button type="primary" htmlType="submit">
+                      Delete
+                    </Button>
+                  </Col>
+
+                </Row>
+
+
+
+              </Form>
+
+            </Card>
+          </Col>
+          <Col span={8}></Col>
+        </Row>
 
       </Content>
       <Footer></Footer>
