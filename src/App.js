@@ -19,8 +19,6 @@ function App() {
           Learn React
           Hello there!
 
-          Explore World!
-
         </a>
       </header>
     </div>
