@@ -19,7 +19,7 @@ function App() {
           Learn React
           Hello there!
 
-          Explore React
+          Explore World!
 
         </a>
       </header>
